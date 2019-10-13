@@ -2,7 +2,7 @@ package battleShip;
 
 public class Destroyer extends Ship {
 
-    public Destroyer(){
+    public Destroyer() {
         length = 2;
         hit[0] = hit[1] = false;
         hit[2] = hit[3] = true;

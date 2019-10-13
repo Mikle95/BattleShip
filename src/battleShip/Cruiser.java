@@ -2,7 +2,7 @@ package battleShip;
 
 public class Cruiser extends Ship {
 
-    public Cruiser(){
+    public Cruiser() {
         length = 3;
         hit[0] = hit[1] = hit[2] = false;
         hit[3] = true;
@@ -14,7 +14,7 @@ public class Cruiser extends Ship {
     }
 
     @Override
-    protected Object clone(){
+    protected Object clone() {
         Ship a = new Cruiser();
         a.setBowColumn(getBowColumn());
         a.setBowRow(getBowRow());

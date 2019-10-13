@@ -2,19 +2,19 @@ package battleShip;
 
 public class EmptySea extends Ship {
 
-    public EmptySea(){
+    public EmptySea() {
         length = 1;
         hit[0] = false;
     }
 
     @Override
-    boolean shootAt(int row, int column){
+    boolean shootAt(int row, int column) {
         hit[0] = true;
         return false;
     }
 
     @Override
-    boolean isSunk(){
+    boolean isSunk() {
         return false;
     }
 
