@@ -1,5 +1,8 @@
 package battleShip;
 
+/**
+ * 2 parts ship class
+ */
 public class Destroyer extends Ship {
 
     public Destroyer() {

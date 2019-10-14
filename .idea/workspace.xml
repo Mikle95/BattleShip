@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d125f920-e13d-4c91-9b3e-9496c296fb8a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d79fa9fd-ec2a-4b5e-957c-f0cd1cde60e4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleShip/BattleShipGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/battleShip/BattleShipGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/battleShip/BattleShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/battleShip/BattleShip.java" afterDir="false" />
@@ -23,16 +22,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1S9lnkLPPqGxJTaK25C9ABp0jZ7" />
+  <component name="ProjectId" id="1SBZDCoMb2654dLWPwYnkNzNREk" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -71,12 +64,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d125f920-e13d-4c91-9b3e-9496c296fb8a" name="Default Changelist" comment="" />
-      <created>1570983860572</created>
+      <changelist id="d79fa9fd-ec2a-4b5e-957c-f0cd1cde60e4" name="Default Changelist" comment="" />
+      <created>1571038827948</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570983860572</updated>
-      <workItem from="1570983864231" duration="1725000" />
+      <updated>1571038827948</updated>
+      <workItem from="1571038831696" duration="3828000" />
     </task>
     <servers />
   </component>

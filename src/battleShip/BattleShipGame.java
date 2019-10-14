@@ -3,7 +3,7 @@ package battleShip;
 import java.util.Scanner;
 
 /**
- *
+ * This main class controls game process
  */
 public class BattleShipGame {
 
@@ -25,6 +25,11 @@ public class BattleShipGame {
         } while (scan.next().toLowerCase().equals("restart"));
     }
 
+    /**
+     * This method is used to input coordinates and check them
+     * @param scan input stream
+     * @param ocean game field
+     */
     static void makeShot(Scanner scan, Ocean ocean) {
         int x = -1, y = -1;
         do {
@@ -42,12 +47,21 @@ public class BattleShipGame {
         ocean.shootAt(x, y);
     }
 
+
+    /**
+     * This method outputs statistic of transferred ocean
+     * @param ocean
+     */
     static void statistic(Ocean ocean) {
         System.out.println("Statistic:\n" + "Shots Fired: " + ocean.getShotsFired() + "\n" +
                 "Hit Count: " + ocean.getHitCount() + "\n" +
                 "Ships Sunk: " + ocean.getShipsSunk());
     }
 
+
+    /**
+     * This method can be used to check work of Ocean class
+     */
     static void ShootAll() {
         Ocean oc = new Ocean();
         oc.placeAllShipsRandomly();

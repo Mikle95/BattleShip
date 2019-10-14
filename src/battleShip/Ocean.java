@@ -2,12 +2,21 @@ package battleShip;
 
 import java.util.Random;
 
+/**
+ * game field class
+ * contains methods to control game process
+ */
 public class Ocean {
     Ship[][] ships = new Ship[10][10];
     int shotsFired;
     int hitCount;
     int shipsSunk;
 
+    /**
+     * Class constructor
+     * initialize variables
+     * fills game field with EmptySeas
+     */
     public Ocean() {
         shotsFired = 0;
         hitCount = 0;
@@ -21,6 +30,9 @@ public class Ocean {
             }
     }
 
+    /**
+     * This method places 10 ships in random coordinates and orientation
+     */
     void placeAllShipsRandomly() {
         Random rnd = new Random();
         int x, y;
@@ -38,11 +50,22 @@ public class Ocean {
             }
     }
 
+    /**
+     * @param row
+     * @param column
+     * @return if cage in transferred coordinates is not empty
+     */
     boolean isOccupied(int row, int column) {
         if (row < 0 || row > 9 || column < 0 || column > 9) return false;
         return !ships[row][column].getClass().equals(EmptySea.class);
     }
 
+    /**
+     * processes request to shoot at transferred coordinates
+     * @param row
+     * @param column
+     * @return if shot was successful
+     */
     boolean shootAt(int row, int column) {
         shotsFired++;
         if (row < 0 || row > 9 || column < 0 || column > 9) return false;
@@ -80,6 +103,9 @@ public class Ocean {
         return ships;
     }
 
+    /**
+     * outputs current state of game field as text in console
+     */
     void print() {
         System.out.println("- | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9");
         for (int i = 0; i < 10; i++) {

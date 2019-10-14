@@ -1,5 +1,8 @@
 package battleShip;
 
+/**
+ * empty cage class
+ */
 public class EmptySea extends Ship {
 
     public EmptySea() {

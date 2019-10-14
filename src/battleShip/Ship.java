@@ -1,24 +1,39 @@
 package battleShip;
 
+/**
+ * This class super class for every cage of game field
+ */
 public class Ship implements Cloneable {
-    protected int bowRow;
-    protected int bowColumn;
-    protected int length;
-    protected boolean horizontal;
-    protected boolean[] hit = new boolean[4];
+    int bowRow;
+    int bowColumn;
+    int length;
+    boolean horizontal;
+    boolean[] hit = new boolean[4];
 
+    /**
+     * @return length of the ship
+     */
     int getLength() {
         return length;
     }
 
+    /**
+     * @return row coordinate of ships first part
+     */
     int getBowRow() {
         return bowRow;
     }
 
+    /**
+     * @return column coordinate of ships first part
+     */
     int getBowColumn() {
         return bowColumn;
     }
 
+    /**
+     * @return ship orientation
+     */
     boolean isHorizontal() {
         return horizontal;
     }
@@ -39,6 +54,14 @@ public class Ship implements Cloneable {
         return "no Ship Type";
     }
 
+    /**
+     * This method checks possibility to place ship in transferred coordinates
+     * @param row
+     * @param column
+     * @param horizontal
+     * @param ocean game field
+     * @return true if it's possible to place, otherwise false
+     */
     boolean okToPlaceShipAt(int row, int column, boolean horizontal, Ocean ocean) {
         boolean check = true;
 
@@ -55,6 +78,13 @@ public class Ship implements Cloneable {
         return check;
     }
 
+    /**
+     * This method places ship at transferred coordinates
+     * @param row
+     * @param column
+     * @param horizontal
+     * @param ocean game field
+     */
     void placeShipAt(int row, int column, boolean horizontal, Ocean ocean) {
         if (!okToPlaceShipAt(row, column, horizontal, ocean)) return;
 
@@ -74,15 +104,27 @@ public class Ship implements Cloneable {
 
     }
 
+    /**
+     * @return liter to place in hit part
+     */
     public String toString() {
         if (isSunk()) return "X";
         else return "S";
     }
 
+    /**
+     * @return if ship was destroyed
+     */
     boolean isSunk() {
         return hit[0] && hit[1] && hit[2] && hit[3];
     }
 
+    /**
+     * This method processes user shot
+     * @param row
+     * @param column
+     * @return if the ship was hit
+     */
     boolean shootAt(int row, int column) {
         int part = -1;
 
@@ -98,11 +140,21 @@ public class Ship implements Cloneable {
             return hit[part] = true;
     }
 
+    /**
+     * This method should be override.
+     * Allows to clone ship-type object
+     */
     @Override
     protected Object clone() {
         return new Ship();
     }
 
+    /**
+     * checks part in transferred coordinates for damage
+     * @param row
+     * @param column
+     * @return true if destroyed, false otherwise
+     */
     boolean isHited(int row, int column) {
         int part = -1;
 
